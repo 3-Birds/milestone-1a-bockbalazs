@@ -14,5 +14,19 @@
 # - Space characters are missing from output
 
 
-def get_frequency(input_string:str) -> dict:
-    pass
+def get_frequency(input_string):
+    try:    
+        input_string = str(input_string).replace(' ', '')
+        result = {}
+        for i in input_string:
+            if i in result:
+                result[i] += 1
+            else:
+                result[i] = 1
+        return result
+    except ValueError:
+        None
+    except None:
+        None
+    except:
+        None

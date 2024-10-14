@@ -6,6 +6,19 @@
 # - In case of None input returns None
 # - In case of Empty input string, returns None
 
-def get_max(numbers:list) -> int:
-    pass
+numbers = (1,2,3,4,7,5,3,9,13,3,5,7)
+
+def get_max(numbers):
+    try:
+        result = numbers[0]
+        for i in numbers:
+            if result < i:
+                result = i
+        return result
+    except ValueError:
+        return None
+    except:
+        return None
+
+print (get_max(numbers))
 
